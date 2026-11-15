@@ -22,10 +22,10 @@
 window.SITE = {
   brand: "Laboy Aquatics Co",
   tagline: "Your Edge in Aquatics Leadership",
-  ownerName: "Your Name",               // ← shown in the About section
+  ownerName: "Jordan Laboy",            // ← shown in the About section, podcast, and article bylines
   podcastName: "The Aquatic Edge Podcast",
   email: "hello@laboyaquatics.com",     // ← your public contact email
-  location: "Available nationwide · On-site & virtual",
+  location: "Based in Southwest Florida · Available nationwide",
   formEndpoint: "",                     // ← optional: Formspree/Getform URL. Blank = opens the visitor's email app.
   links: {
     apple: "#",

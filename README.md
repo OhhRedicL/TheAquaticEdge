@@ -20,8 +20,8 @@ Almost everything lives in **`assets/js/content.js`**:
 - **`EPISODES`**: podcast episodes, newest first. Set `url` to the episode link.
 
 ## Things to personalize
-1. `ownerName` and `email` in `content.js`
-2. Your headshot: save it as `assets/img/headshot.jpg`, then uncomment the `<img class="photo">` line in the About section of `index.html`
+1. `email` in `content.js`
+2. Your headshot lives at `assets/img/headshot.jpg`. To change it, replace that file with a new one (a 4:5 portrait works best).
 3. Podcast links (`apple`, `spotify`, `youtube`) and optionally `podcastEmbed`
 4. Contact form: by default it opens the visitor's email app. For real form submissions, create a free form at formspree.io and paste its URL into `formEndpoint`.
 5. Free resources: drop PDFs in `assets/downloads/` and point the links in the Resources section at them.

@@ -199,7 +199,7 @@ p { margin: 0 0 1em; }
   background: var(--grad-diag); box-shadow: var(--shadow-lg);
   display: grid; place-items: center;
 }
-.about-photo .frame img.photo { width: 100%; height: 100%; object-fit: cover; }
+.about-photo .frame img.photo { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .about-photo .frame .placeholder { text-align: center; color: rgba(255,255,255,.9); padding: 30px; }
 .about-photo .frame .placeholder img { width: 70%; margin: 0 auto 18px; filter: brightness(0) invert(1); opacity: .9; }
 .about-photo .frame .placeholder small { font-size: .8rem; opacity: .75; }
@@ -497,7 +497,7 @@ p { margin: 0 0 1em; }
 .tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 40px 0; }
 .tags span { font-size: .8rem; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: var(--mist); color: var(--teal-700); }
 .author-box { display: flex; gap: 20px; align-items: center; padding: 28px; border-radius: var(--radius-lg); background: var(--foam); border: 1px solid var(--line); margin-top: 40px; }
-.author-box img { width: 80px; flex: none; }
+.author-box img { width: 80px; height: 80px; flex: none; border-radius: 50%; object-fit: cover; border: 3px solid var(--white); box-shadow: 0 0 0 2px var(--aqua); }
 .author-box b { font-family: var(--font-head); color: var(--navy); display: block; }
 .author-box p { margin: 4px 0 0; color: var(--muted); font-size: .94rem; }
 .post-nav { display: flex; justify-content: space-between; gap: 20px; margin-top: 50px; }
