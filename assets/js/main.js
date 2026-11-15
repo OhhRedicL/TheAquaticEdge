@@ -85,7 +85,7 @@
         <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
         <ul class="nav-links">
           ${links.map(([t, h]) => `<li><a href="${h}"${page === "blog" && t === "Blog" ? ' class="active"' : ""}>${t}</a></li>`).join("")}
-          <li><a class="btn btn--primary" href="${home}#contact">Work With Me</a></li>
+          <li><a class="btn btn--primary btn--ring" href="${home}#contact">Work With Me</a></li>
         </ul>
       </div>`;
     const toggle = $(".nav-toggle", el);
