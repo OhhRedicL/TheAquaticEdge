@@ -22,7 +22,7 @@
 window.SITE = {
   brand: "Laboy Aquatics Co",
   tagline: "Your Edge in Aquatics Leadership",
-  ownerName: "Jordan Laboy",            // ← shown in the About section, podcast, and article bylines
+  ownerName: "Jordan",                  // ← shown in the About section, podcast, and article bylines
   podcastName: "The Aquatic Edge Podcast",
   email: "hello@laboyaquatics.com",     // ← your public contact email
   location: "Based in Southwest Florida · Available nationwide",
