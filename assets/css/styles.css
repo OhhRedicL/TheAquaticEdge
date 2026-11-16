@@ -679,3 +679,23 @@ p { margin: 0 0 1em; }
 @keyframes pop { 0% { transform: scale(1); } 40% { transform: scale(1.08); } 100% { transform: scale(1); } }
 @media (max-width: 900px) { .impact-wrap { grid-template-columns: 1fr; gap: 40px; } .impact { padding: 80px 0; } }
 @media (max-width: 640px) { .impact-grid { grid-template-columns: repeat(10, 1fr); gap: 7px; } .impact-board { padding: 20px 16px 22px; } .impact-board-head .hint { display: none; } }
+
+/* ---------- Risk & Readiness programs ---------- */
+.programs { background: var(--white); }
+.grad-text-dark { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.programs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.program {
+  position: relative; padding: 34px 34px 32px 108px; border-radius: var(--radius-lg);
+  background: var(--foam); border: 1px solid var(--line); overflow: hidden;
+  transition: transform .35s, box-shadow .35s, border-color .35s, background .35s;
+}
+.program::after { content: ""; position: absolute; right: -60px; bottom: -60px; width: 180px; height: 180px; border-radius: 50%; border: 22px solid rgba(70,188,187,.08); transition: transform .5s; }
+.program:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: transparent; background: var(--white); }
+.program:hover::after { transform: scale(1.25); }
+.prog-ico { position: absolute; left: 30px; top: 34px; width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center; background: var(--grad-diag); color: #fff; box-shadow: 0 10px 24px -8px rgba(42,149,144,.6); }
+.prog-ico svg { width: 26px; height: 26px; }
+.prog-tag { display: inline-block; font: 700 .68rem var(--font-head); letter-spacing: .14em; text-transform: uppercase; color: var(--teal); background: var(--mist); padding: 5px 10px; border-radius: 999px; margin-bottom: 12px; }
+.program h3 { font-size: 1.22rem; margin-bottom: 8px; }
+.program p { color: var(--muted); font-size: .97rem; margin: 0; }
+@media (max-width: 900px) { .programs-grid { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .program { padding: 92px 22px 26px; } .prog-ico { left: 22px; top: 24px; } }
