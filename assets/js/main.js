@@ -316,6 +316,15 @@
     }));
   }
 
+  /* ---------- Links that pre-select a contact topic ---------- */
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a[data-topic]");
+    const sel = document.getElementById("f-topic");
+    if (!a || !sel) return;
+    const opt = Array.from(sel.options).find((o) => o.text === a.dataset.topic);
+    if (opt) sel.value = opt.value;
+  });
+
   /* ---------- Reveal on scroll ---------- */
   let io;
   function observe() {

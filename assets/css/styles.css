@@ -700,3 +700,15 @@ p { margin: 0 0 1em; }
 @media (max-width: 900px) { .programs-grid { grid-template-columns: 1fr; } }
 @media (max-width: 640px) { .program { padding: 92px 22px 26px; } .prog-ico { left: 22px; top: 24px; } }
 .program--wide { grid-column: 1 / -1; }
+.prog-links { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 18px; position: relative; z-index: 1; }
+.prog-link { display: inline-flex; align-items: center; gap: 8px; font: 700 .9rem var(--font-head); color: var(--teal-700); }
+.prog-link svg, .res-links svg { width: 16px; height: 16px; transition: transform .25s; }
+.prog-link:hover svg, .res-links a:hover svg { transform: translateX(4px); }
+.prog-link--soft { color: var(--muted); font-weight: 600; }
+.prog-link--soft:hover { color: var(--teal-700); }
+.res-links { display: flex; flex-direction: column; gap: 10px; }
+.res-links .res-pair { font-weight: 600; font-size: .8rem; color: var(--muted); padding-top: 10px; border-top: 1px dashed var(--line); }
+.res-links .res-pair:hover { color: var(--teal-700); }
+.program:target, .resource:target { animation: target-flash 1.8s ease-out; }
+@keyframes target-flash { 0%, 30% { box-shadow: 0 0 0 4px rgba(70,188,187,.55), var(--shadow); } 100% { box-shadow: 0 0 0 0 rgba(70,188,187,0); } }
+.res-links a { align-self: flex-start; }
