@@ -713,3 +713,12 @@ p { margin: 0 0 1em; }
 @keyframes target-flash { 0%, 30% { box-shadow: 0 0 0 4px rgba(70,188,187,.55), var(--shadow); } 100% { box-shadow: 0 0 0 0 rgba(70,188,187,0); } }
 .res-links a { align-self: flex-start; }
 .res-meta { display: block; font-size: .74rem; font-weight: 600; color: var(--teal); margin: -4px 0 8px; letter-spacing: .02em; }
+
+/* Free resource link arrows: download arrows bounce down, "go to" arrows slide right */
+.resource a svg { transition: transform .25s ease; flex: none; }
+.resource a:hover { color: var(--teal); }
+.resource a[download]:hover svg, .resource a[download]:focus-visible svg { transform: none; animation: dl-bounce .9s ease-in-out infinite; }
+.resource a:not([download]):hover svg, .resource a:not([download]):focus-visible svg { transform: translateX(5px); }
+.res-links .res-pair { display: inline; }
+.res-links .res-pair svg { display: inline-block; vertical-align: -3px; margin-left: 6px; }
+@keyframes dl-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
