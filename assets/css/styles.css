@@ -723,3 +723,11 @@ p { margin: 0 0 1em; }
 .res-links .res-pair { display: inline; }
 .res-links .res-pair svg { display: inline-block; vertical-align: -3px; margin-left: 6px; }
 @keyframes dl-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+
+/* Keep nav labels on one line on mid-size screens */
+.nav-links a { white-space: nowrap; }
+@media (max-width: 1180px) and (min-width: 901px) {
+  .nav-links a { padding: 10px 10px; font-size: .86rem; }
+  .nav-links .btn { padding: 11px 18px; margin-left: 4px; }
+  .brand-text small { display: none; }
+}
