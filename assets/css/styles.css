@@ -699,3 +699,4 @@ p { margin: 0 0 1em; }
 .program p { color: var(--muted); font-size: .97rem; margin: 0; }
 @media (max-width: 900px) { .programs-grid { grid-template-columns: 1fr; } }
 @media (max-width: 640px) { .program { padding: 92px 22px 26px; } .prog-ico { left: 22px; top: 24px; } }
+.program--wide { grid-column: 1 / -1; }
