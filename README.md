@@ -24,7 +24,7 @@ Almost everything lives in **`assets/js/content.js`**:
 2. Your headshot lives at `assets/img/headshot.jpg`. To change it, replace that file with a new one (a 4:5 portrait works best).
 3. Podcast links (`apple`, `spotify`, `youtube`) and optionally `podcastEmbed`
 4. Contact form: by default it opens the visitor's email app. For real form submissions, create a free form at formspree.io and paste its URL into `formEndpoint`.
-5. Free resources: drop PDFs in `assets/downloads/` and point the links in the Resources section at them.
+5. Free resources: the four branded PDFs live in `assets/downloads/`. To edit their wording, change `tools/build_pdfs.py` and run `python3 tools/build_pdfs.py` (needs Python, Node and Playwright with Chromium).
 
 ## Drone flyover
 The home page has a cinematic aerial section. By default it plays an **animated, simulated waterpark flyover** drawn in the browser, so it needs no video file. To use real drone footage, add an MP4 (ideally 1080p, under about 15 MB, no audio) and set:
