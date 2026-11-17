@@ -90,20 +90,16 @@ p { margin: 0 0 1em; }
 .btn--primary { background: var(--grad); color: var(--white); box-shadow: 0 10px 30px -8px rgba(42, 149, 144, .6); border: 0; padding: 17px 30px; }
 .btn--primary:hover { transform: translateY(-2px); box-shadow: 0 16px 36px -8px rgba(42, 149, 144, .75); filter: brightness(1.1); }
 
-/* Light ring that travels around the button's edge */
-@property --ring-angle { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
-.btn--ring { position: relative; isolation: isolate; }
-.btn--ring::before, .btn--ring::after {
-  content: ""; position: absolute; inset: -3px; border-radius: inherit; padding: 2px; pointer-events: none;
-  background: conic-gradient(from var(--ring-angle), transparent 0deg 250deg, rgba(127,224,211,.25) 285deg, #ffffff 335deg, #7fe0d3 350deg, transparent 360deg);
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
-  animation: ring-spin 3s linear infinite;
+/* Water ripple: aqua rings spread outward from the button */
+.btn--ripple { position: relative; isolation: isolate; }
+.btn--ripple::before, .btn--ripple::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: -1;
+  border: 2px solid var(--aqua); animation: btn-ripple 2.6s ease-out infinite;
 }
-.btn--ring::after { inset: -5px; padding: 4px; filter: blur(5px); opacity: .9; }
-.btn--ring:hover::before, .btn--ring:hover::after { animation-duration: 1.5s; }
-@keyframes ring-spin { to { --ring-angle: 360deg; } }
+.btn--ripple::after { animation-delay: 1.3s; }
+.btn--ripple:hover::before, .btn--ripple:hover::after { animation-duration: 1.6s; }
+.btn--ripple:hover::after { animation-delay: .8s; }
+@keyframes btn-ripple { 0% { transform: scale(1); opacity: .8; } 100% { transform: scale(1.3, 1.75); opacity: 0; } }
 .btn--ghost { color: var(--white); border-color: rgba(255,255,255,.35); background: rgba(255,255,255,.06); backdrop-filter: blur(6px); }
 .btn--ghost:hover { border-color: var(--aqua); background: rgba(70,188,187,.15); transform: translateY(-2px); }
 .btn--outline { color: var(--navy); border-color: var(--line); background: var(--white); }
